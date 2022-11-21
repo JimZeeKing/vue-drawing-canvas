@@ -225,15 +225,15 @@ export default /*#__PURE__*/defineComponent({
     },    
     getCoordinates(event: Event) {
       let x, y;
-      if ((<TouchEvent>event).touches && (<TouchEvent>event).touches.length > 0) {
+    /*  if ((<TouchEvent>event).touches && (<TouchEvent>event).touches.length > 0) {
         let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.querySelector('#'+this.canvasId);
         let rect = canvas.getBoundingClientRect();
         x = ((<TouchEvent>event).touches[0].clientX - rect.left);
         y = ((<TouchEvent>event).touches[0].clientY - rect.top);
-      } else {
+      } else {*/
         x = (<MouseEvent>event).offsetX;
         y = (<MouseEvent>event).offsetY;
-      }
+      //}
       return {
         x: x,
         y: y
